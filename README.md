@@ -66,7 +66,7 @@ export default function App() {
 <hr />
 
 ## Project Code 👨‍💻
-Diagram source code: https://github.com/NavidMansuri5155/Diagrams_Graph.io 
+Diagram source code: https://github.com/NavidMansuri5155/Diagrams_Graph.io <br/>
 Live Demo: https://navidmansuri5155.github.io/Diagrams_Graph.io
 
 ## ☕ coffee Features:
