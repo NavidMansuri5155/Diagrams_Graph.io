@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# How To Create A Graph With A Diagram In React.js?
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I have created a group like reject using a diagram. And this is a very easy way to make a graph. To understand it more, let's take an example.
+<img src="https://github.com/beautifulinteractions/beautiful-react-diagrams/raw/master/beautiful-react-diagrams.png" alt="pic...." />
+     
 
-## Available Scripts
+> EX. Let's say one owner has 10 clients. So the data of 10 clients will come out from the owner. There will be a condition in the client that he is also a client and can become the owner in future. When the client becomes the owner, the same condition will be there that he can be the owner as well as the client. This means that the input and output from its box will also be. 
 
-In the project directory, you can run:
 
-### `npm start`
+### We will first install a graph 📈.
+```javascript
+$ beautiful-react-diagrams
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+After that, we will initialize the data in a variable in `JSON` format something like this.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```javascript
+const data = createSchema({
+  nodes: [
+    {
+      id: "node-1",
+      content: "@NAVBIZADA_NAVID_MANSURI",
+      coordinates: [650, 10],
+      inputs: [
+        { id: "port-11-b", alignment: "left" }
+      ],
+      outputs: [{ id: "port-12", alignment: "left" }]
+    }
+  ],
+```
+And after that, we will pass this variable to a function. so that he can show us.Something a bit like this.
 
-### `npm test`
+```javascript
+const UncontrolledDiagram = () => {
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  const [schema, { onChange }] = useSchema(data);
 
-### `npm run build`
+```
+We will get our leader back after the is done so that it is ready to run on our browser.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+> NOTE: We have to keep in mind that our style should be within this heart and not a separate file for it. If you create a separate file for this then it will not work because to create this group it must have its own separate page. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```javascript
+ return (
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    <div >
+      <div style={{ height: "70rem", width: "88rem" }}>
+        <Diagram schema={schema} onChange={onChange} />
+      </div>
+    </div>
 
-### `npm run eject`
+  );
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+and after that we will pass the function which we created above.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```javascript
+export default function App() {
+  return (
+    <>
+      <UncontrolledDiagram />
+    </>
+  )
+};
+```
+<hr />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Project Code 👨‍💻
+Diagram source code: https://github.com/NavidMansuri5155/Diagrams_Graph.io 
+Live Demo: https://navidmansuri5155.github.io/Diagrams_Graph.io
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## ☕ coffee Features:
 
-## Learn More
+<ul>
+  <li>Concise API</li>
+  <li>Small and lightweight</li>
+  <li>Easy to use</li>
+  <li>Easy to customise</li>
+</ul>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tech Stack 💻
+<ul>
+  <li>How to use react-diagrams. </li>
+  <li>How to make owner and clients systems.</li>
+  <li>How to make a graph page.</li>
+  <li>How to pass two-time function.</li>
+</ul>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  <hr />
+  
+## Thank you for reading 🙏
 
-### Code Splitting
+If you enjoyed this article or found it helpful, give it a thumbs-up 👍
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Feel free to connect 👋
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[Instagram](https://www.instagram.com/nabizada_navid_mansuri/), [Facebook](https://www.facebook.com/navid.mansuri.5/), [Twitter](https://twitter.com/NAVIDMANSURI7)
+  
